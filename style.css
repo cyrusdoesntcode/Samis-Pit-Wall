@@ -1,0 +1,769 @@
+/* Website template by freewebsitetemplates.com                         */
+/* Re-themed for a personal Red Bull Racing fan page by Sami Shaharear   */
+/* Nur (ID: 25224560). Existing selectors below are kept (same layout)  */
+/* but colours, a few backgrounds and buttons were changed to CSS       */
+/* instead of images. Scroll to the bottom for the new "NEW / ADDED     */
+/* CSS" section (welcome banner, template badge, stats, pit-stop game). */
+
+/*------------------------- Fonts ---------------------------*/
+@font-face {
+	font-family: 'Conv_OpenSans-Regular';
+	src: url('OpenSans-Regular.eot');
+	src: url('OpenSans-Regular.eot?#iefix') format('embedded-opentype'),  url('OpenSans-Regular.woff') format('woff'),  url('OpenSans-Regular.ttf') format('truetype'),  url('OpenSans-Regular.svg#OpenSans-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_JockeyOne-Regular';
+	src: url('JockeyOne-Regular.eot');
+	src: url('JockeyOne-Regular.eot?#iefix') format('embedded-opentype'),  url('JockeyOne-Regular.woff') format('woff'),  url('JockeyOne-Regular.ttf') format('truetype'),  url('JockeyOne-Regular.svg#JockeyOne-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/*------------------------- Layout styles ------------------------*/
+body {
+	margin:0;
+	font-family:Arial, Helvetica, sans-serif;
+	background: linear-gradient(180deg, #05070f 0, #0e1738 480px, #0e1738 100%) #05070f;
+}
+a {
+	outline:none;
+}
+a img {
+	border:0;
+	display:block;
+}
+.page {
+	width:960px;
+	margin:0 auto;
+}
+/*------------------------- Header -------------------------*/
+.header {
+	background: linear-gradient(115deg, #070d21 0%, #14204a 55%, #1a2958 100%);
+	padding:28px 0 0;
+	position:relative;
+}
+.header a#logo {
+	display:block;
+	width:625px;
+	height:87px;
+	margin:0 auto;
+}
+.header ul {
+	padding:0;
+	margin:29px 0 0;
+	list-style:none;
+	overflow:hidden;
+}
+.header ul li {
+	float:left;
+	background: rgba(255,255,255,0.06);
+	width:240px;
+	height:48px;
+}
+.header ul li.selected {
+	background: linear-gradient(180deg, #e30118, #a50110);
+	width:240px;
+	height:48px;
+}
+.header ul li a {
+	float:left;
+	font-family: 'Conv_JockeyOne-Regular';
+	font-size:18px;
+	line-height:24px;
+	text-decoration:none;
+	text-shadow:0 2px 0 #3b3939;
+	color:#fff;
+	margin:11px 0 0 15px;
+	display:block;
+}
+.header ul li a:hover {
+	color:#fdd900;
+}
+.header ul li span {
+	display:block;
+	float:right;
+	font-family: 'Conv_OpenSans-Regular';
+	color:#c8cad6;
+	font-size:10px;
+	line-height:24px;
+	margin:14px 15px 0 0;
+}
+.header div.featured {
+	background:url(racing-car.png) no-repeat right 31px;
+	height:420px;
+}
+.header div.featured h2 {
+	margin:0;
+	font-family: 'Conv_JockeyOne-Regular';
+	font-size:32px;
+	line-height:24px;
+	color:#f9fafd;
+	font-weight:normal;
+	margin:48px 0 0 15px;
+	display:inline-block;
+}
+.header div.featured p {
+	color:#f9fafd;
+	font-size:12px;
+	line-height:24px;
+	background:rgba(7,13,33,0.55);
+	margin: 26px 0 0;
+	padding: 15px 20px 0 15px;
+	width: 341px;
+	border-radius:4px;
+}
+.header div.featured p a {
+	background:none;
+	width:auto;
+	height:auto;
+	margin:0;
+	display:inline;
+	color:#fdd900;
+	text-decoration:none;
+}
+.header div.featured p a:hover {
+	text-decoration:underline;
+}
+.header div.featured a.btn-view-more {
+	display:inline-block;
+	background:#fdd900;
+	color:#0e1738;
+	font-family: 'Conv_JockeyOne-Regular';
+	font-size:15px;
+	text-decoration:none;
+	height:auto;
+	width:auto;
+	padding:11px 28px;
+	border-radius:4px;
+	margin:21px 0 0 15px;
+	text-indent:0;
+	transition:transform .15s ease, background .15s ease;
+}
+.header div.featured a.btn-view-more:hover {
+	background:#ffffff;
+	transform:translateY(-2px);
+}
+.header-about {
+	position:static;
+}
+.header-about div.featured {
+	background:url(featured.png) no-repeat;
+	height:360px;
+	margin:0 0 60px;
+}
+.header-about div.featured h2 {
+	display:block;
+	font-family: 'Conv_JockeyOne-Regular';
+	color:#f4f5f5;
+	text-shadow:0 3px 4px #000000;
+	font-size:52px;
+	line-height:36px;
+	font-style:italic;
+	margin:118px 0 0 50px;
+	display:inline-block;
+}
+.header-about div.featured span {
+	display:block;
+	font-size:20px;
+	line-height:36px;
+	color:#c8cad6;
+	text-shadow:0 3px 4px #000000;
+	font-style:italic;
+	margin:9px 0 0 50px;
+	padding: 0 40px 0 0;
+}
+.header-news div.featured {
+	background:url(racer.jpg) no-repeat right 18px;
+	padding:18px 0 0;
+	height:402px;
+}
+.header-news .featured h4, .header-contact .featured h4 {
+	margin:0;
+	background:#e30118;
+	width:342px;
+	height:36px;
+	font-size:24px;
+	line-height:36px;
+	color:#fff;
+	font-family: 'Conv_JockeyOne-Regular';
+	font-weight:normal;
+	padding: 0 0 0 15px;
+	border-radius:0 4px 4px 0;
+}
+.header-news .featured h3, .header-contact .featured h3 {
+	margin:18px 0 0 15px;
+	font-family: 'Conv_JockeyOne-Regular';
+	font-size:32px;
+	line-height:36px;
+	color:#fff;
+	font-weight:normal;
+}
+.header-news .featured p, .header-contact .featured p {
+	background:none!important;
+	margin: 15px 0 0 !important;
+	padding: 0 0 0 15px !important;
+	color:#e7e8ee;
+}
+.header-contact div.featured {
+	background: url(founders.png) no-repeat 282px 39px;
+	height: 321px;
+	padding: 48px 0 0;
+	margin:0 0 51px;
+}
+/*------------------------- Body ---------------------------*/
+.body {
+	border-top:6px solid #e30118;
+	background:url(border2.png) repeat-x left bottom #dcd9d9;
+	margin:-60px 0 0;
+	padding: 18px 0 83px 18px;
+	overflow:hidden;
+}
+.body div.sidebar {
+	width:192px;
+	float:left;
+	margin: 0 60px 0 0;
+}
+.body div.sidebar div:first-child {
+	overflow: hidden;
+	padding:0 0 18px;
+	margin:0;
+}
+.body div.sidebar div {
+	background: none #1b1b1b;
+	margin:36px 0 0;
+}
+.body div.sidebar div h3 {
+	height:24px;
+	background:none #e30118;
+	padding:0 0 0 12px;
+	color:#f9fafd;
+	font-size:14px;
+	line-height:24px;
+	text-transform:uppercase;
+	display:block;
+	margin:0;
+	font-family: 'Conv_JockeyOne-Regular';
+	font-weight:normal;
+}
+.body div.sidebar div a#twitter {
+	background:url(icons.png) no-repeat;
+	width:28px;
+	height:24px;
+	text-indent:-99999px;
+	display:block;
+	float:left;
+	margin:18px 0 0 18px;
+}
+.body div.sidebar div a#twitter:hover {
+	background:url(icons.png) no-repeat 0 -73px;
+}
+.body div.sidebar div a#fb {
+	background:url(icons.png) no-repeat 0 -25px;
+	width:27px;
+	height:23px;
+	text-indent:-99999px;
+	display:block;
+	float:left;
+	margin:18px 38px 0;
+}
+.body div.sidebar div a#fb:hover {
+	background:url(icons.png) no-repeat 0 -98px;
+}
+.body div.sidebar div a#googleplus {
+	background:url(icons.png) no-repeat 0 -49px;
+	width:23px;
+	height:23px;
+	text-indent:-99999px;
+	display:block;
+	float:left;
+	margin:18px 0 0;
+}
+.body div.sidebar div a#googleplus:hover {
+	background:url(icons.png) no-repeat 0 -122px;
+}
+.body div.sidebar div div:first-child {
+	background:url(man-opacity.png) no-repeat;
+	padding:0;
+}
+.body div.sidebar div div ul {
+	list-style:none;
+	padding:0 12px 6px;
+	margin:18px 0 0;
+}
+.body div.sidebar div div ul li h4 {
+	margin:0;
+	display:block;
+}
+.body div.sidebar div div ul li h4 a {
+	color:#f9fafd;
+	font-size:16px;
+	line-height:24px;
+	display:block;
+	margin:0;
+	font-family: 'Conv_JockeyOne-Regular';
+	font-weight:normal;
+	text-decoration:none;
+}
+.body div.sidebar div div ul li h4 a:hover {
+	color:#fdd900;
+}
+.body div.sidebar div div ul li p {
+	color:#939494;
+	font-size:11px;
+	line-height:24px;
+	margin:2px 0 22px;
+	font-family: 'Conv_OpenSans-Regular';
+}
+.body div.sidebar div ul li p a {
+	text-decoration:none;
+	color:#e30118;
+}
+.body div.sidebar div ul li p a:hover {
+	text-decoration:underline;
+}
+.body div.content {
+	float:left;
+	width:690px;
+}
+.body div.content h1 {
+	color:#c40116;
+	font-size:44px;
+	line-height:48px;
+	font-family: 'Conv_JockeyOne-Regular';
+	margin:36px 0 8px;
+	font-weight:normal;
+}
+.body div.content p {
+	color:#343434;
+	font-size:12px;
+	line-height:24px;
+	margin:27px 0 22px;
+	text-align:left;
+	padding: 0 40px 0 0;
+}
+.body div.content h4 {
+	height:84px;
+	background:none #b9b9b9;
+	display:block;
+	margin:0 18px 42px 0;
+	font-family: 'Conv_JockeyOne-Regular';
+	font-size:27px;
+	line-height:93px;
+	color:#707070;
+	font-weight:normal;
+	text-transform:uppercase;
+	padding:0 0 0 15px;
+}
+.body div.content h4 span {
+	color:#e30118;
+	font-size:36px;
+}
+.body div.content h3 {
+	color:#c40116;
+	font-size:16px;
+	line-height:24px;
+	font-family: 'Conv_OpenSans-Regular';
+	margin:0;
+	font-style:italic;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+.body div.content p a {
+	color:#343434;
+	text-decoration:underline;
+}
+.body div.content p a:hover {
+	color:#860606;
+}
+.body div.content ul {
+	list-style:none;
+	padding:0 18px 0 0;
+	margin:0;
+}
+.body div.content ul li:first-child {
+	background:none;
+	margin:0;
+	padding:0;
+}
+.body div.content ul li {
+	overflow:hidden;
+	background:url(border.png) repeat-x left top;
+	margin:23px 0 0;
+	padding:25px 0 0;
+}
+.body div.content ul li span {
+	display:block;
+	height:24px;
+	background:none #1b1b1b;
+	font-size:10px;
+	line-height:24px;
+	color:#f9fafd;
+	padding:0 0 0 15px;
+	font-family: 'Conv_OpenSans-Regular';
+	margin:0 0 24px;
+}
+.body div.content ul li a {
+	display:block;
+	float:left;
+	margin:0 23px 0 0;
+}
+.body div.content ul li a img {
+	border:6px solid #fff;
+}
+.body div.content ul li a img:hover {
+	opacity:0.85;
+}
+.body div.content ul li div {
+	float:left;
+	width:360px;
+}
+.body div.content ul li div h3 {
+	margin:0 0 18px;
+	display:inline-block;
+	color:#c40116;
+	font-size:26px;
+	line-height:27px;
+	font-family: 'Conv_JockeyOne-Regular';
+	font-style:normal;
+	text-transform:none;
+	font-weight:normal;
+	text-decoration:none;
+}
+.body div.content ul li div p {
+	font-family: 'Conv_OpenSans-Regular';
+	font-size:12px;
+	line-height:24px;
+	font-style:italic;
+	color:#3e3e3d;
+	margin:0 0 23px;
+	padding:0;
+	text-align: justify;
+}
+.body div.content ul li div p a {
+	margin:0;
+	float:none;
+	display:inline;
+}
+.body div.content ul li div a {
+	font-size:12px;
+	line-height:24px;
+	color:#e30118;
+	font-family: 'Conv_OpenSans-Regular';
+	letter-spacing:-0.025em;
+}
+.body div.content ul li div a:hover {
+	color:#414141;
+}
+.body div.contact p {
+	margin:0 0 20px;
+	color:#736f6f;
+}
+.body div form {
+	padding:0 40px 0 0;
+	overflow:hidden;
+}
+.body div form input {
+	padding:10px 5px;
+	width:398px;
+	background:none #fff;
+	border:1px solid #ccc;
+	margin:0 30px 12px 0;
+	color:#060606;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	line-height:18px;
+}
+.body div form input#email {
+	margin-bottom:35px;
+}
+.body div form label {
+	color:#848080;
+	font-style:italic;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	line-height:24px;
+	text-shadow:0 1px 0 #fefdfd;
+	margin:0;
+	display:block;
+	position:relative;
+}
+.body div form label span {
+	color:#848080;
+	font-style:italic;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	line-height:24px;
+	text-shadow:0 1px 0 #fefdfd;
+	margin:0;
+	position:absolute;
+	top:150px;
+}
+.body div form textarea {
+	color:#060606;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	line-height:24px;
+	border:1px solid #ccc;
+	resize:none;
+	width:398px;
+	padding:5px;
+	height:326px;
+	margin:0 30px 29px 0;
+	overflow:auto;
+}
+.body div form input#subscribe {
+	padding:0;
+	width:auto;
+	height:auto;
+	clear:both;
+	margin:4px 10px 0 0;
+	vertical-align:top;
+}
+.body div form input#agree {
+	padding:0;
+	width:auto;
+	height:auto;
+	clear:both;
+	margin:4px 10px 0 0;
+}
+.body div form label.subscribe {
+	width:185px;
+	float:left;
+	font-size:12px;
+	line-height:22px;
+	color:#848080;
+	font-style:normal;
+}
+.body div form label.agree {
+	width:225px;
+	float:left;
+	font-size:12px;
+	line-height:22px;
+	color:#848080;
+	font-style:normal;
+}
+.body div form input#submit {
+	background:#e30118;
+	color:#fff;
+	font-family: 'Conv_JockeyOne-Regular';
+	font-size:15px;
+	text-transform:uppercase;
+	letter-spacing:0.5px;
+	clear: both;
+	display: block;
+	float: left;
+	height: 42px;
+	margin: 29px 0 0 222px;
+	padding: 0;
+	width: 186px;
+	border:0;
+	border-radius:4px;
+	cursor:pointer;
+	transition:background .15s ease;
+}
+.body div form input#submit:hover {
+	background:#a50110;
+}
+/*------------------------- Footer -------------------------*/
+.footer {
+	background:#0e1738;
+	width:960px;
+	min-height:52px;
+	margin:42px 0 72px;
+	border-radius:4px;
+	overflow:hidden;
+}
+.footer ul {
+	float:left;
+	list-style:none;
+	margin:0;
+	overflow:hidden;
+	padding: 14px 0 0 15px;
+}
+.footer ul li:first-child {
+	background:none;
+	padding-left:0;
+}
+.footer ul li {
+	background:url(border-footer-nav.png) no-repeat left 8px;
+	float:left;
+	padding:0 21px;
+}
+.footer ul li a {
+	color:#c8cad6;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height:16px;
+	text-decoration:none;
+}
+.footer ul li a:hover {
+	color:#fdd900;
+}
+.footer p.site-credit {
+	color:#c8cad6;
+	float:right;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height:16px;
+	margin:18px 15px 0 0;
+	text-decoration:none;
+}
+
+/* =====================================================================
+   NEW / ADDED CSS -- written by Sami Shaharear Nur (ID: 25224560)
+   Everything from here down is new. It adds: the "original template"
+   badge, the JS welcome banner, a quick stats strip, the Pit Stop
+   Reaction Challenge widget (styling for the new JS function), and a
+   small-screen layout. Colours also change several rules above.
+   ===================================================================== */
+
+.template-badge {
+	display:table;
+	margin:0 auto;
+	background:#fdd900;
+	color:#0e1738;
+	font-family:'Conv_JockeyOne-Regular';
+	font-size:13px;
+	letter-spacing:0.3px;
+	text-decoration:none;
+	padding:9px 22px;
+	border-radius:0 0 8px 8px;
+	box-shadow:0 4px 14px rgba(0,0,0,0.35);
+	position:relative;
+	z-index:5;
+}
+.template-badge:hover {
+	background:#ffffff;
+}
+
+.welcome-banner {
+	max-width:700px;
+	margin:16px auto 0;
+	background:linear-gradient(90deg, #e30118, #a50110);
+	color:#fff;
+	font-family:'Conv_JockeyOne-Regular';
+	font-size:16px;
+	text-align:center;
+	padding:12px 20px;
+	border-radius:8px;
+	box-shadow:0 6px 18px rgba(0,0,0,0.4);
+	opacity:0;
+	transform:translateY(-10px);
+	animation:dropIn .5s ease forwards .1s;
+}
+@keyframes dropIn {
+	to { opacity:1; transform:translateY(0); }
+}
+
+.stat-strip {
+	display:flex;
+	flex-wrap:wrap;
+	gap:12px;
+	margin:8px 0 0;
+	padding:0;
+	list-style:none;
+}
+.stat-strip li {
+	flex:1 1 130px;
+	background:#0e1738;
+	border-top:3px solid #fdd900;
+	color:#fff;
+	padding:14px 10px;
+	text-align:center;
+	border-radius:0 0 4px 4px;
+}
+.stat-strip li strong {
+	display:block;
+	font-family:'Conv_JockeyOne-Regular';
+	font-size:24px;
+	color:#fdd900;
+}
+.stat-strip li span {
+	font-size:10px;
+	letter-spacing:0.4px;
+	text-transform:uppercase;
+	color:#c8cad6;
+}
+
+.pit-challenge {
+	margin:30px 40px 30px 0;
+	background:#0e1738;
+	border:1px solid #1a2958;
+	border-radius:8px;
+	padding:26px 24px;
+	text-align:center;
+}
+.pit-challenge h2 {
+	font-family:'Conv_JockeyOne-Regular';
+	color:#fdd900;
+	font-size:24px;
+	margin:0 0 6px;
+	text-transform:uppercase;
+	letter-spacing:0.5px;
+}
+.pit-challenge > p {
+	color:#c8cad6;
+	font-size:13px;
+	margin:0 0 18px;
+	padding:0;
+	text-align:center;
+}
+.pit-light {
+	width:64px;
+	height:64px;
+	border-radius:50%;
+	background:#e30118;
+	margin:0 auto 18px;
+	box-shadow:0 0 22px rgba(227,1,24,0.6);
+	transition:background .15s ease, box-shadow .15s ease;
+}
+.pit-btn {
+	font-family:'Conv_JockeyOne-Regular';
+	font-size:15px;
+	letter-spacing:0.4px;
+	color:#0e1738;
+	background:#fdd900;
+	border:0;
+	border-radius:5px;
+	padding:12px 26px;
+	cursor:pointer;
+	margin:0 6px 14px;
+	transition:transform .12s ease, background .12s ease;
+}
+.pit-btn:hover:not(:disabled) {
+	background:#ffffff;
+	transform:translateY(-2px);
+}
+.pit-btn:disabled {
+	opacity:0.35;
+	cursor:not-allowed;
+}
+.pit-message {
+	color:#fff;
+	font-size:14px;
+	min-height:40px;
+	margin:4px 0 0;
+	line-height:20px;
+}
+.pit-message strong {
+	color:#fdd900;
+	font-size:17px;
+}
+
+@media (max-width:980px) {
+	.page { width:100%; }
+	.header a#logo { width:92%; max-width:625px; }
+	.header ul li { width:24%; }
+	.header ul li a { margin-left:8px; font-size:15px; }
+	.header div.featured { background-position:center bottom; background-size:cover; }
+	.header div.featured p { width:auto; margin-right:15px; }
+	.body { padding-left:12px; }
+	.body div.sidebar { display:none; }
+	.body div.content { width:auto; float:none; padding:0 12px 0 0; }
+	.body div form input,
+	.body div form textarea { width:88%; }
+	.body div form input#submit { margin-left:0; }
+	.footer { width:auto; margin-left:12px; margin-right:12px; }
+	.footer p.site-credit { float:none; display:block; padding:0 0 10px 15px; }
+}
